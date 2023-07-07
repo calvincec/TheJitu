@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    
+    padding: 10px;
+    position: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 81%);
+    gap: 10px;
+}
+.container{
+    background-color: rgb(242, 241, 247);
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.cart{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+.picture{
+    width: 40%;
+    height: 100%;
+    display: grid;
+
+    grid-template-columns:repeat(4, 1fr) ;
+    grid-template-rows: 70% 20%;
+    /* gap: 10px; */
+    grid-template-areas: "mainpic mainpic mainpic mainpic"
+    "pic1 pic2 pic3 pic4";
+}
+.mainpic{
+    /* height: 100%;
+    width: 100%; */
+}
+.pic1{
+    height: 100%;
+    width: 100%;
+}
+.pic2{
+    height: 100%;
+    width: 100%;   
+}
+.pic3{
+    height: 100%;
+    width: 100%;   
+}
+.pic4{
+    height: 100%;
+    width: 100%;   
+}
+
+.add2cart{
+    width: 20%;
+    background-color: hsl(26, 100%, 55%);
+    border-radius: 10px;
+}
+.sneakercompany{
+    color: hsl(26, 100%, 55%);
+}
+span{
+    font-weight: bold;
+}
+.percent{
+    border-radius: 20%;
+    border: 0;
+    background-color: hsl(25, 100%, 94%);
+}
