@@ -3,9 +3,9 @@
     padding: 0;
 }
 body{
-    height: 80%;
+    height: 80%
     width: 100%;
-    margin-top: 5%;
+    margin-top: 5px;
     margin-bottom: 5%;
     display: flex;
     justify-content: center;
@@ -17,9 +17,10 @@ body{
 }
 .head{
     width: 80%;
-    height: 20%;
+    height: 10%;
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     margin-bottom: 10px;
 }
 /* .w {
@@ -34,8 +35,9 @@ body{
 .trending a{
     color: black;
 }
+/* 54% */
 .container{
-    height: 54%;
+    height: 50%;
     width: 80%;
     background-color: hsl(36, 100%, 99%);
     display: grid;
