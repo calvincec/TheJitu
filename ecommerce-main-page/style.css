@@ -17,7 +17,7 @@ body{
     background-color: rgb(242, 241, 247);
     height: 70%;
     width: 80%;
-    display: flex;
+    display: grid;
     flex-wrap: nowrap;
     justify-content: flex-start;
     gap: 10px;

@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: hsl(226, 43%, 10%);
+    width: 100%;
+    height: 100%;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rubik', sans-serif;
+    
+}
+.container{
+    height: 90%;
+    width: 90%;
+    /* background-color: red; */
+    
+    
+}
+.inner{
+    height: 80%;
+    width: 70%;
+    /* background-color: red; */
+    display: grid;
+    grid-template-columns:repeat(4, 1fr) ;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    grid-template-areas: "one two three four"
+    "one five six seven";
+    padding: 10%;
+    color: white;
+}
+.one{
+    grid-area: one;
+    /* display: flex;
+    flex-direction: column; */
+    background-color: hsl(235, 46%, 20%);
+    
+}
+.two{
+    grid-area: two;
+    background-color:hsl(15, 100%, 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.three{
+    grid-area: three;
+    background-color:hsl(195, 74%, 62%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.four{
+    grid-area: four;
+    background-color:hsl(348, 100%, 68%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.five{
+    grid-area: five;
+    background-color:hsl(145, 58%, 55%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.six{
+    grid-area: six;
+    background-color:hsl(264, 64%, 52%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.seven{
+    grid-area: seven;
+    background-color:hsl(43, 84%, 65%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.inner2, .inner3, .inner4, .inner5, .inner6, .inner7{
+    height: 80%;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 10px;
+    padding: 10%;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 10px;
+    position: relative;
+    /* z-index: 2; */
+}
+.inner2:hover, .inner3:hover, .inner4:hover, .inner5:hover, .inner6:hover, .inner7:hover{
+    background-color: hsl(235, 46%, 40%);
+    cursor: pointer;
+}
+.inner div{
+    border-radius: 10%;
+}
+.onetxt{
+    
+    border-radius: 10px;
+    padding: 10%;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 10px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav p{
+    font-size: 18px;
+}
+.largetxt{
+    font-size: 44px;
+}
+.one img{
+    height: 40%;
+    width: 60%;
+    border: solid;
+    border-radius: 50%;
+}
+.oneimg{
+    height: 70%;
+    background-color: hsl(235, 45%, 61%);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.pic2 img, .pic3 img, .pic4 img, .pic5 img,.pic6 img, .pic7 img{
+    height: 150%;
+}
+.pic2, .pic3, .pic4, .pic5,.pic6, .pic7{
+    border-radius: 10px;
+    height: 30%;
+    /* border: solid; */
+    display: flex;
+    justify-content: flex-end;
+}
+.onetxt a{
+    color: white;
+    text-decoration: none;
+}
+.onetxt a:hover{
+    font-weight: bold;
+}
+
+@media screen and (max-width:769px){
+    .inner{
+        height: 80%;
+        width: 70%;
+        /* background-color: red; */
+        display: grid;
+        grid-template-columns:repeat(3, 1fr) ;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+        grid-template-areas: "one two three"
+        "one five six"
+        "one four seven";
+        padding: 10%;
+        color: white;
+    }
+}
+@media screen and (max-width:453px){
+    .inner{
+        height: 80%;
+        width: 70%;
+        /* background-color: red; */
+        display: block;
+        /* grid-template-columns:repeat(3, 1fr) ;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+        grid-template-areas: "one two three"
+        "one five six"
+        "one four seven"; */
+        padding: 10%;
+        color: white;
+    }
+}

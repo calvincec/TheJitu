@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 80%;
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(36, 100%, 99%);
+    /* gap: 10px; */
+    flex-direction: column ;
+    
+}
+.head{
+    width: 80%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+/* .w {
+    font-size: xx-large;
+} */
+.trending{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    
+}
+.trending a{
+    color: black;
+}
+.container{
+    height: 54%;
+    width: 80%;
+    background-color: hsl(36, 100%, 99%);
+    display: grid;
+    
+    grid-template-columns:repeat(3, 1fr) ;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    grid-template-areas: "one one two "
+    "three four two "
+}
+.one img{
+    width: 100%;
+    height: 100%;
+}
+.one{
+    grid-area: one;
+}
+.two{
+    background-color: hsl(240, 100%, 5%);
+    grid-area: two;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.three{
+    background-color: hsl(36, 100%, 99%);
+    font-size: xx-large;
+    grid-area: three;
+}
+.four{
+    grid-area: four;
+    
+   
+
+}
+.lowerno{
+    height: 250px;
+    width: 80%;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr) ;
+    /* grid-template-rows: repeat(3, 1fr); */
+    gap: 10px;
+    padding-top: 10px;
+    grid-template-areas: "five six seven ";
+    
+}
+.five{
+    grid-area: five;
+    display: flex;
+    justify-content: space-between;
+}
+.six{
+    grid-area: six;
+    display: flex;
+    justify-content: space-between;
+}
+.seven{
+    grid-area: seven;
+    display: flex;
+    justify-content: space-between;
+}
+.fivepic img, .sixpic img, .sevenpic img{
+    height: 100%;
+    width: 100%;
+    
+    
+}
+
+a {
+    text-decoration: none;
+}
+button{
+    border: 0;
+}
+.four button a{
+    padding: 10px;
+    color: hsl(36, 100%, 99%);
+    
+}
+.four p{
+    font-size: larger;
+    margin-bottom: 20%;
+}
+.four button{
+    margin-top: 40%;
+    background-color: hsl(5, 85%, 63%);
+}
+.button4 a:hover{
+    background-color: hsl(240, 100%, 5%);
+}
+.two section{
+    color: hsl(36, 100%, 99%);
+}
+.two section a{
+    color: hsl(36, 100%, 99%);
+}
+.two section a:hover{
+    color: hsl(35, 77%, 62%);
+}
+.two h1{
+    color: hsl(35, 77%, 62%);
+}
+.li{
+    color: black;
+}
+.li:hover, .trending a:hover{
+    color: hsl(5, 85%, 63%);
+}
+.code{
+    color: hsl(233, 8%, 79%);
+}
+.two p{
+    margin-top: 10%;
+}
+
+@media screen and (min-width:501px){
+    .menu{
+        display: none;
+    }
+}
+@media screen and (max-width:769px){
+    .container{
+    height: 54%;
+    width: 80%;
+    background-color: hsl(36, 100%, 99%);
+    display: grid; 
+    grid-template-columns:repeat(2, 1fr) ;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    grid-template-areas: "one one "
+    "two two"
+    "three four "
+}
+    .lowerno{
+        display: block;
+    }
+}
+@media screen and (max-width: 500px){
+    .container{
+        display: block;
+    }
+    .trending{
+        display: none;
+    }
+}
