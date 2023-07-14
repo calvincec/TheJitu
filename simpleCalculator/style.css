@@ -1,0 +1,21 @@
+
+body{
+    background-color: grey;
+}
+#sbmt, #number2, #number1{
+  height: 50px;
+  
+}
+#number2, #number1{
+    border-radius: 10px;
+}
+#sbmt{
+    margin-left: 10%;
+    width: 100px;
+    border-radius: 20px;
+    background-color: green; 
+}
+.result>h1{
+    color: rgb(11, 31, 85);
+    width: 100%;
+}
