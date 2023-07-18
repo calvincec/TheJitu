@@ -17,7 +17,7 @@ submit.addEventListener('click', (e)=>{
 
         document.querySelector('.result').innerHTML = "<h1>The result is therefore: <h1> ";
         document.querySelector('.result').innerHTML  += (`sum = ${sum}` + "<br>");
-        document.querySelector('.result').innerHTML  += (`diff = ${diff}` + "<br>");
+        document.querySelector('.result').innerHTML  += (`difference = ${diff}` + "<br>");
         document.querySelector('.result').innerHTML  += (`product = ${product}` + "<br>");
         document.querySelector('.result').innerHTML  += (`division = ${division}` + "<br>");
     }
