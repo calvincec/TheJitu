@@ -13,7 +13,8 @@ class Contact{
         let contactadd = document.querySelector("#contact")
         let imagelink = document.querySelector("#image") 
         let submit = document.querySelector("#submit")
-        submit.addEventListener("click",(e)=>{
+        let form = document.querySelector("#form")
+        form.addEventListener("submit",(e)=>{
             e.preventDefault();
             this.addnewuser(name,contactadd,imagelink)
         })
@@ -61,19 +62,26 @@ class Contact{
         let displayusers = document.querySelector(".displayusers")
         let m = localStorage.getItem("details")
 
-        let p = []
-        p = m
+        let p = [m]
+        p.flat()
+        p.forEach(element => {
+            console.log(p);           
+        });
+        // m=JSON.stringify(m)
+        
+        // p = JSON.parse(m)
+        
         console.log(p);
         // p = JSON.parse(m)
         // p.forEach(element => {
         //     console.log(element);
         // });
         
-        // displayusers.innerHTML = m
+        // displayusers.innerHTML = p
     }
 }
 
 let a = new Contact
-// a.addnewuser("calvince","20 raps", "https://pixabay.com/photos/child-boy-portrait-cute-kid-817373/")
+// a.addnewuser("mike","20 raps", "https://pixabay.com/photos/child-boy-portrait-cute-kid-817373/")
 // a.addnewuser("yes","20 raps", "google.com")
 a.adduser()
