@@ -1,3 +1,4 @@
+// localStorage.clear()
 let alltasks = []
 
 let form = document.querySelector('.inputform')

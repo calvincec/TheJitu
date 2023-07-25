@@ -34,7 +34,7 @@ class Contact{
                 tag = `
                 <div class="user">
                     <div class="pic">
-                        <img src="${imagelink}" alt="">
+                        <img src=${imagelink} alt="">
                     </div>
                     <div class="name">
                         <p>NAME: </p>
@@ -62,7 +62,8 @@ class Contact{
         let displayusers = document.querySelector(".displayusers")
         let m = localStorage.getItem("details")
 
-        let p = [m]
+        let p = []
+        p.push(m)
         p.flat()
         p.forEach(element => {
             console.log(p);           

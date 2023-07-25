@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mainbody">
+        <div class="background">
+            <div class="inner">
+                <div class="top">
+                    <p><h1>TODO list 2023</h1></p>
+                
+                    <form action="" class="inputform">
+                        <p>Add new task</p>
+                        <div class="newtask">
+                            <div class="newtaskinner">
+                                <div>
+                                    <input type="text" name="" id="titleinput" placeholder="New task title">
+                                    <div id="radio">
+                                        Task done? 
+                                        <input type="checkbox" name="" id="check">
+                                    </div>
+                                    <div class="date">
+                                        <!-- <p>Expected completion date? </p> -->
+                                        <p>to be completed on:</p>
+                                        <input type="date" name="expectedcompletion" id="expectedcompletion" style="color: grey;" placeholder="Expected completion date">
+                                    </div>
+                                </div>
+                                <input type="text" name="" id="new-todo-input" placeholder="New task content">
+                            </div>
+                            <input type="button" class="submit" value="submit"  style="color: black;">
+                            
+                            
+                        </div>
+                        
+                    </form>
+                </div>
+                <div class="header">
+                    <!-- <div class="alltasks"><p>All Tasks</p></div> -->
+                    <div class="active"><p>active</p></div>
+                    <div class="completed"><p>completed</p></div>
+                    <div class="clearcompleted"><p>clearcompleted</p></div>
+                </div>
+                <div class="bodytask">
+                    <div class="element1">
+                        <div class="title1"><h1>
+                            Some title goes here manze
+                        </h1>    
+                        </div>
+                        <div class="body1">
+                            <p>This is the whole task details. it contains all 
+                                the tasks details of this task . just look at
+                                it carefully and see how it behaves. it is a long text though
+                            </p>
+                            <div class="bottom">
+                                <p style="margin-right: 10px;">Submitted 5 days earlier</p>
+                                <div class="action">
+                                    <div class="edit">Edit</div>
+                                    <div class="delete">Delete</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    <script src="./main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    background-color: black;
+}
+.body{
+    width: 100vw;
+    background-color: black;
+}
+.header>div:hover{
+    background-color: white;
+    border-radius: 5px;
+}
+.mainbody{
+    /* height: 100%; */
+    background-color: black;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.background{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner{
+    background-color: rgb(114, 147, 236);
+    width: 80vw;
+    padding: 20px;
+    border-radius: 5px;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+}
+.top>p>{
+    margin-left: 10px;
+    color: rgb(18, 96, 151);
+    height: 20%;
+}
+input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    clip-path: circle(46% at 50% 50%);
+    margin-left: 10px;
+}
+input[type="text"]{
+    padding: 10px;
+    background-color: white;
+    border: none;
+    outline: none;
+    color: grey;
+    border-radius: 5px;
+}
+.inputform{
+    display: block;
+}
+.submit{
+    height: 30px;
+    width: 70px;
+    border-radius: 10px;
+    border: 0;
+    background-color: yellow;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.header{
+    display: flex;
+    justify-content: space-around;   
+}
+.bodytask{
+    width: 100%;
+    background-color: yellow;
+    border-radius: 10px;
+}
+.newtaskinner{
+    display: flex;
+    justify-content: space-between;
+}
+#new-todo-input{
+    background-color: white;
+    width: 60%;
+    margin-left: 5px;
+}
+.newtaskinner>div{
+    width: 40%;
+}
+#radio{
+    display: flex;
+    align-items: center;
+}
+.newtask{
+    display: flex;
+    flex-direction: column;
+}
+.date{
+    display: flex;
+    align-items: centre;
+}
+.action{
+    display: flex;
+}
+.edit{
+    color: purple;
+    margin-right: 10px;
+}
+.delete{
+    color: red;
+}
+.bodytask>div{
+    border-radius: 10px;
+}
+.bottom{
+    display: flex;
+}
+#expectedcompletion{
+    border-radius: 5px;
+    border: solid;
+}
+
+@media screen and (max-width: 570px){
+    .newtaskinner{
+        display: block;
+    }
+    .date{
+        width: 300px;
+    }
+    
+}
+@media screen and (max-width: 270px){
+    .date{
+        display: grid;
+    }
+    #titleinput{
+        width: 100px;
+    }
+    
+}
+@media screen and (max-width: 270px){
+    .header{
+        flex-wrap: wrap;
+    }
+}

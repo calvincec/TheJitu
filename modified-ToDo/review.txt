@@ -1,0 +1,9 @@
+has many colors
+the done button at the adding task should not be there
+one should not add a task date before today
+errors due to adding a new task should not just be an alert
+
+a completed task should not be edited
+marking uncomplete pushes it to complete
+
+a good interface should not exceed 3 colors
