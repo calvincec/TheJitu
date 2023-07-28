@@ -1,0 +1,28 @@
+POST http://localhost:4600/notes
+Content-Type: application/json
+
+{
+    "title": "Eat",
+    "content": "go for a pizza",
+    "createdAt": "27/03/2023"
+} 
+###get all notes
+GET http://localhost:4600/notes
+
+
+### get one note
+GET http://localhost:4600/notes/
+
+###update a note
+PUT http://localhost:4600/notes/
+Content-Type: application/json
+
+
+{
+    "title": "Eat",
+    "content": "go for a pizza",
+    "createdAt": "27/03/2023"
+}
+
+###delete a note
+DELETE http://localhost:4600/notes/
