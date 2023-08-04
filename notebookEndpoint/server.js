@@ -3,7 +3,7 @@ const { notingrouter } = require('./Routes/routeNote')
 
 const app = express()
 
-app.use(express.json)
+app.use(express.json())
 app.use('/notes', notingrouter)
 
 app.use((err, req, res, next)=>{

@@ -6,9 +6,9 @@ const notingrouter = Router();
 
 notingrouter.post('/', newNote);
 notingrouter.get('/', getallnotes);
-notingrouter.get('/:id', getoneNote);
-notingrouter.put('/:id', updateNote);
-notingrouter.delete('/:id', deleteNote)
+notingrouter.get('/:ID', getoneNote);
+notingrouter.put('/:ID', updateNote);
+notingrouter.delete('/:ID', deleteNote)
 ;
 
 module.exports = {

@@ -1,0 +1,4 @@
+CREATE OR ALTER PROCEDURE getAllnotes
+AS
+BEGIN SELECT * FROM notesTable
+END

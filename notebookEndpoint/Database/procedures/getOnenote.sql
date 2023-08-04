@@ -1,0 +1,5 @@
+CREATE OR ALTER PROCEDURE getanote (@ID VARCHAR(200))
+AS  
+    BEGIN 
+        SELECT * FROM notesTable WHERE ID = @ID
+    END

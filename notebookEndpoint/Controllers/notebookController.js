@@ -19,42 +19,59 @@ const newNote = async(req, res)=>{
 
        const {title, content, createdAt} = req.body
 
-        const pool = await mssql.connect(sqlConfig)
-        const result = (await pool.request()
-        .query(`INSERT INTO notesTable(ID, title, content, createdAt) VALUES(${ID}, ${title}, ${content}, ${createdAt})`)
-        )
+        
 
-        res.json({
-            message: "The new note is created succesfully",
-            note: newnote
-        })
+        const pool = await mssql.connect(sqlConfig)
+       
+            const result = await pool.request()
+            .input('ID', mssql.VarChar, ID)
+            .input('title', mssql.VarChar, title)
+            .input('content', mssql.VarChar, content)
+            .input('createdAt', mssql.Date, createdAt)
+            .execute('addNote')
+            
+            // console.log(result);
+             if(result.rowsAffected[0]==1){  
+             return res.status(200).json({
+                 message: "Note added Succesfully",
+             })}
+             else{
+                 return res.json({message: "Creation failed"})
+             }
+     
+         
+        
     } catch (error) {
+        // createProjectsTable()
         return res.json({error})
-    }
+    }   
 }
 
 const  getallnotes = async(req, res)=>{
     try {
-        res.json({notes: notes})
-    
+        const pool = await (mssql.connect(sqlConfig))
+
+        const allnotes = (await pool.request().execute('getAllnotes')).recordset
+
+        return res.json({notes: allnotes})
     } catch (error) {
-        return res.json({error})
+        return res.status(400).json({error: error})
     }
 }
 
 const getoneNote = async(req, res)=>{
     try {
-        const ID = req.params.ID
+        const {ID} = req.params
 
-        console.log(ID);
+        const pool = await mssql.connect(sqlConfig)
 
-        const note = notes.filter(el =>el.ID == ID)
+        const note = (await pool.request().input('ID', ID).execute('getanote')).recordset
 
-        res.json({
-            note
+        return res.status(200).json({
+            note: note
         })
     } catch (error) {
-        return res.json({error})
+        return res.json({error:error})
     }
 }
 
@@ -62,22 +79,30 @@ const getoneNote = async(req, res)=>{
 
 const updateNote = async(req, res)=>{
     try {
-        const ID = req.params.ID
+        const {ID} = req.params
 
         const {title, content, createdAt} = req.body
 
-        const notePosition = notes.findIndex(note => note.ID == ID)
+        const pool = await mssql.connect(sqlConfig)
 
-        if (notePosition <0) {
-            res.json('note not found')
+        const result = (await pool.request()
+        .input('ID', mssql.VarChar, ID)
+        .input('title', mssql.VarChar, title)
+        .input('content', mssql.VarChar, content)
+        .input('createdAt', mssql.Date, createdAt)
+        .execute('updateNote'));
+
+        console.log(result);
+
+        if(result.rowsAffected == 1){
+            res.status(200).json({
+                message: 'note updated successfully'
+            })
+        }else{
+            res.status(400).json({
+                message: 'The note is not found'
+            })
         }
-        else{
-            notes[notePosition] = new Notes(ID, title, content, createdAt)
-        }
-        res.json({
-            message: "Project updated successfully",
-            note: notes[notePosition]
-        })
     } catch (error) {
         return res.json({Error: error})
     }
@@ -87,18 +112,21 @@ const deleteNote = async(req, res)=>{
     try {
         const ID = req.params.ID
 
-        let notePosition = notes.findIndex(note => note.ID==ID)
+        const pool = await mssql.connect(sqlConfig)
 
-        if(notePosition< 0){
-            res.json({message: 'note not found'})
-        }
-        else{
-            notes.splice(notePosition, 1)
-        }
-
-        return res.json({
-            message: 'deleted successfully'
+        const result = await pool.request()
+        .input('ID', ID)
+        .execute('deletenote')
+      
+        if(result.rowsAffected == 1){
+            res.json({
+                    message: 'note deleted successfully'
+            })
+        }else{
+            res.json({
+                message: 'note not found'
         })
+        }
     } catch (error) {
         return res.json({Error: error})
     }

@@ -4,25 +4,25 @@ Content-Type: application/json
 {
     "title": "Eat",
     "content": "go for a pizza",
-    "createdAt": "27/03/2023"
+    "createdAt": "2023-04-04"
 } 
 ###get all notes
 GET http://localhost:4600/notes
 
 
 ### get one note
-GET http://localhost:4600/notes/
+GET http://localhost:4600/notes/2868f63e-727f-4d8b-a74a-be10d18d4f42
 
 ###update a note
-PUT http://localhost:4600/notes/
+PUT http://localhost:4600/notes/2868f63e-727f-4d8b-a74a-be10d18d4f42
 Content-Type: application/json
 
 
 {
-    "title": "Eat",
-    "content": "go for a pizza",
-    "createdAt": "27/03/2023"
+    "title": "EatEAS",
+    "content": "go for a pizzaEAS",
+    "createdAt": "2023-04-04"
 }
 
 ###delete a note
-DELETE http://localhost:4600/notes/
+DELETE http://localhost:4600/notes/2868f63e-727f-4d8b-a74a-be10d18d4f42
