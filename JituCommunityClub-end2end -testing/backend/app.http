@@ -1,0 +1,9 @@
+POST http://localhost:4502/member
+Content-Type: application/json
+
+{
+    "memberName": "Calvincedemo",
+    "email": "fname.lname@thejitu.net",
+    "phoneNumber": "07837382",
+    "cohort": "previus"
+}
