@@ -18,8 +18,8 @@ const registerUser = async(req,res)=>{
         }
     
         const pool  = await mssql.connect(sqlConfig)
-        if(pool.connected){
-            createMembersTable()
+       
+            // createMembersTable()
             const result = await pool.request()
            .input('id', mssql.VarChar, id)
            .input('memberName', mssql.VarChar, memberName)
@@ -27,15 +27,16 @@ const registerUser = async(req,res)=>{
            .input('phoneNumber', mssql.VarChar, phoneNumber)
            .input('cohort', mssql.VarChar, cohort)
            .execute('newMember')
-    
+
+    console.log(result);
            if(result.rowsAffected==1){
             return res.json({
-                message: "Project created Succesfully",
+                message: "Project created Succesfully"
             })}
             else{
                 return res.json({message: "Creation failed"})
             }
-        }
+       
     } catch (error) {
         return res.json({error})
     }
